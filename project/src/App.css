@@ -1,38 +1,457 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&family=Open+Sans:wght@300;400&display=swap');
+
+body,
+header,
+div,
+p,
+ul,
+img,
+li,
+h1,
+h2,
+section {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+:root {
+  --bs-black: #1D1D1C;
+  --bs-darkblack: #181818;
+  --bs-btnblack: #11253E;
+  --bs-purple: #A5AFD4;
+  --bs-font-cormorant-serif: 'Cormorant Garamond', serif;
+  --bs-font-sans-serif: 'Open Sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font: 1rem/1.5 var(--bs-font-sans-serif);
+  color: var(--bs-black);
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a,
+a:hover {
+  color: var(--bs-black);
+  text-decoration: none;
+}
+
+.btn {
+  font: 0.9rem var(--bs-font-sans-serif);
+  background-color: var(--bs-purple);
   color: white;
+  text-align: center;
+  padding: 7px 13px;
+  width: 139px;
+  border-radius: 100px;
+  border: 0px;
+  cursor: pointer;
+  transition: all 0.25s linear;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  transform: scale(1.04);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h1,
+h2 {
+  font-family: var(--bs-font-cormorant-serif);
+  font-weight: 500;
+  position: relative;
+  ;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+h1>span {
+  max-width: 500px;
+  display: block;
+  line-height: 110%;
+}
+
+h1.slogan {
+  font-size: 4rem;
+}
+
+h1 {
+  font-size: 3.03rem;
+  line-height: 120%;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+.img {
+  width: 100%;
+  max-width: calc(100% - 40px);
+}
+
+
+.App {
+  max-width: 1440px;
+  margin: 0px auto;
+}
+
+.mobile {
+  display: block;
+}
+
+.tablet {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+/* Css for Header */
+header {
+  padding: 30px 0px;
+}
+
+.menu {
+  list-style: none;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: all 0.25s linear;
+  background: white;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  max-width: 180px;
+  width: 100%;
+
+}
+
+.open .menu {
+  opacity: 1;
+  padding: 0px 0px 10px 20px;
+  box-shadow: 1px 7px 23px -11px #d5c3c3
+}
+
+.menu li {
+  padding-right: 40px;
+  cursor: pointer;
+  transition: all 0.25s linear;
+  display: block;
+}
+
+.open .menu li {
+  padding-top: 5px;
+}
+
+.menu li:hover {
+  transform: scale(1.1);
+}
+
+/* Css for Card */
+#card {
+  line-height: 0%;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Css for Overview */
+#overView {
+  padding: 0px 30px 50px 30px;
+  position: relative;
+}
+
+#overView>div {
+  display: block;
+}
+
+
+.slogan {
+  padding: 50px 0px;
+}
+
+.slogan::before {
+  content: '';
+  background: url('./images/ic-star.png');
+  background-size: contain;
+  width: 50px;
+  height: 14px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.slogan::after {
+  content: '';
+  background: url('./images/ic-big-arrow.png');
+  background-size: contain;
+  width: 91px;
+  height: 27px;
+  display: block;
+  margin-top: 30px;
+}
+
+.overview {
+  position: relative;
+}
+
+.overview .desription {
+  max-width: 400px;
+}
+
+.bgOverview {
+  background: url('./images/bgoverview.png') no-repeat -20px 30px;
+}
+
+.overview .cta {
+  margin: 30px 0px 5px 0px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.start {
+  width: 76px;
+  height: 79px;
+  background: url('./images/ic-diamond.png') no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.btn.order {
+  background-color: var(--bs-btnblack);
+  margin-right: 20px;
+}
+
+.link {
+  cursor: pointer;
+  position: relative;
+  padding-right: 15px;
+}
+
+.link:hover::after {
+  right: -5px;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: url(./images/ic-next.png) no-repeat center;
+  background-size: contain;
+  transition: all 0.25s linear;
+}
+
+.reportInfo {
+  max-width: 538px;
+  padding: 50px 0px 40px 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 0.85rem;
+}
+
+.reportInfo span {
+  display: block;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.reportInfo li {
+  width: 32%;
+  text-align: center;
+  border-left: 2px solid rgba(29, 29, 28, 0.2);
+}
+
+
+.reportInfo li:nth-child(1) {
+  width: 30%;
+  border: none;
+  text-align: left;
+}
+
+.navigator {
+  position: relative;
+  margin-right: 20px;
+}
+
+#nav {
+  width: 20px;
+  height: 7px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 10;
+  display: block;
+}
+
+#nav span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--bs-black);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+  transform-origin: left center;
+}
+
+#nav span:nth-child(1) {
+  top: 0px;
+}
+
+#nav span:nth-child(2) {
+  top: 6px;
+}
+
+#nav span:nth-child(3) {
+  top: 12px;
+}
+
+.navigator.open #nav span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.navigator.open #nav span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.navigator.open #nav span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 14px;
+}
+
+/* Css for Features */
+#features {
+  background-color: var(--bs-black);
+  color: white;
+  padding: 50px 0px;
+}
+
+#listFeatures {
+  padding-top: 30px;
+}
+
+.feature {
+  overflow: hidden;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.item {
+  margin: 0px 15px;
+  padding: 30px;
+  background: var(--bs-darkblack);
+  height: 100%
+}
+
+.item .btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+}
+
+.item .description {
+  padding-bottom: 30px;
+  padding-top: 10px;
+  color: rgba(255, 255, 255, .6);
+}
+
+.feature {
+  align-items: stretch;
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 4.05rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+    padding: 60px 0px;
+  }
+
+  #listFeatures {
+    margin-left: -30px;
+    width: calc(100% + 30px);
+  }
+
+  #features {
+    padding: 100px 0px;
+  }
+
+  .menu {
+    display: flex;
+    opacity: 1;
+    margin-top: 10px;
+    max-width: 1000px;
+    background: transparent;
+  }
+
+  #nav {
+    display: none;
+    padding-left: 0;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 918px;
+  }
+
+  .reportInfo {
+    padding-bottom: 100px;
+  }
+
+  .overview .cta {
+    margin: 50px 0px;
+  }
+
+  .reportInfo {
+    font-size: 1rem;
+  }
+
+  .reportInfo span {
+    font-size: 1.5rem;
+  }
+
+  .reportInfo li:nth-child(1) {
+    width: 25%;
+  }
+
+  #overView {
+    padding: 0px;
+    justify-content: stretch;
+  }
+
+  #card {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  #overView>div {
+    display: flex;
   }
 }
