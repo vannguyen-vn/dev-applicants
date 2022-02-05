@@ -149,7 +149,8 @@ header {
 }
 
 /* Css for Card */
-#card {
+#card,
+.mcard {
   line-height: 0%;
   overflow: hidden;
   width: 100%;
@@ -275,7 +276,6 @@ header {
 
 .navigator {
   position: relative;
-  margin-right: 20px;
 }
 
 #nav {
@@ -405,6 +405,11 @@ header {
 }
 
 @media screen and (min-width: 768px) {
+
+  .navigator {
+    margin-right: 20px;
+  }
+
   .mobile {
     display: none;
   }

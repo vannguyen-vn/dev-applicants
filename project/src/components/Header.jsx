@@ -11,13 +11,14 @@ const Header = () => {
     setActive(!isActive);
   }
 
+
   return (
     <header>
       <GridRow>
         <GridColumn width={2}>
           <div className="logo"><img src={logo} alt="Logo" /></div>
         </GridColumn>
-        <GridColumn width={10} className="navigator" className={isActive ? "navigator" : "navigator open"} >
+        <GridColumn width={10} className={isActive ? "navigator" : "navigator open"} >
           <div id="nav" onClick={handleToggle} className="tablet">
             <span></span>
             <span></span>

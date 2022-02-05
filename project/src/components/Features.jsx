@@ -1,5 +1,6 @@
 import React from 'react';
 import { GridRow, GridColumn } from 'emotion-flex-grid'
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Fearutes = ({ data }) => {
 
@@ -11,19 +12,25 @@ const Fearutes = ({ data }) => {
   const limitData = data.slice(0, 6);
 
   return (
-    <GridRow wrap='wrap' id="listFeatures">
-      {/* <GridColumn width={[12, 12, 3]}> */}
-      {limitData.map((item, i) => (
-        <GridColumn width={[12, 6, 4]} key={i} p={20} className="feature">
-          <div className="item">
-            <h2 className="title">{item.title}</h2>
-            <p className="description">{item.description}</p>
-            <button className="btn" value={item.button.link} onClick={handleClick} aria-label="Open a new page">Learn more</button>
-          </div>
-        </GridColumn>
-      ))}
-      {/* </GridColumn> */}
-    </GridRow>
+    <ScrollAnimation
+      animateIn="fadeInUp"
+      animateOut="fadeOutdown"
+      duration={1}
+      delay={0}
+    >
+      <GridRow wrap='wrap' id="listFeatures">
+        {limitData.map((item, i) => (
+          <GridColumn width={[12, 6, 4]} key={i} p={20} className="feature">
+            <div className="item">
+              <h2 className="title">{item.title}</h2>
+              <p className="description">{item.description}</p>
+              <button className="btn" value={item.button.link} onClick={handleClick} aria-label="Open a new page">Learn more</button>
+            </div>
+          </GridColumn>
+        ))}
+      </GridRow>
+
+    </ScrollAnimation>
   )
 }
 

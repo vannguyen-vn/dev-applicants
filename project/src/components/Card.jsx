@@ -7,7 +7,7 @@ const Card = () => {
   return (
     <>
       <div id="card" className="desktop"><img src={cardPic} className="img" alt="" /></div>
-      <div id="card" className="mobile"><img src={mcardPic} className="img" alt="" /></div>
+      <div id="mcard" className="mobile"><img src={mcardPic} className="img" alt="" /></div>
     </>
   )
 }

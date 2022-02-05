@@ -10,6 +10,7 @@ import { getLCP, getFID, getCLS } from "web-vitals";
 import { GridRow, GridColumn } from "emotion-flex-grid";
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import "animate.css";
 
 
 if (typeof window !== "undefined") {
