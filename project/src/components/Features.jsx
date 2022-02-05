@@ -14,7 +14,7 @@ const Fearutes = ({ data }) => {
   return (
     <ScrollAnimation
       animateIn="fadeInUp"
-      animateOut="fadeOutdown"
+      animateOut="fadeOut"
       duration={1}
       delay={0}
     >

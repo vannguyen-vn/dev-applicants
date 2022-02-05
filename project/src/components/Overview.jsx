@@ -38,7 +38,6 @@ const Overview = () => {
           <li>Reviews<span>1200+</span></li>
         </ul>
       </ScrollAnimation>
-
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { GridRow, GridColumn } from 'emotion-flex-grid'
-
 import logo from "../images/logo.svg";
 
 const Header = () => {
@@ -10,7 +9,6 @@ const Header = () => {
   const handleToggle = () => {
     setActive(!isActive);
   }
-
 
   return (
     <header>

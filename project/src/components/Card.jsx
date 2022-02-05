@@ -2,7 +2,6 @@ import React from "react";
 import cardPic from "../images/card.jpg";
 import mcardPic from "../images/card-m.png";
 
-
 const Card = () => {
   return (
     <>
